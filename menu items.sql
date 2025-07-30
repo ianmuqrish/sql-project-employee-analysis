@@ -4,7 +4,7 @@ from menu_items;
 
 -- 2. Find the number of items on the menu.
 select count(*)
-from menu_items
+from menu_items;
 
 -- 3. What are the least and most expensive items on the menu?
 select *
@@ -19,13 +19,13 @@ order by price desc;  -- most expensive
 -- 4. How many Italian dishes are on the menu?
 select count(*) as italian_dishes
 from menu_items
-where category = 'Italian'
+where category = 'Italian';
 
 -- 5. What are the least and most expensive Italian dishes on the menu?
 select *
 from menu_items
 where category = 'Italian'
-order by price  -- least expensive
+order by price; -- least expensive
 
 select *
 from menu_items
