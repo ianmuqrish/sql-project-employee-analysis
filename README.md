@@ -1,22 +1,22 @@
 # 🧾 Sales Performance Analysis (SQL Project)
 
-This project explores a fictional company's sales data using SQL. It is structured around three main tables: Customers, Orders, and Products.
+This project explores a fictional company's sales data using SQL. It is structured around three main tables: Menu_items, Order_details and Menu_items&order_details
 
 ---
 
 ## 📌 Objective
 
 Analyze sales performance and answer key business questions like:
-- Which product lines are most profitable?
-- What are the sales trends over time?
-- Who are the top-performing sales reps?
+- What are the least and most expensive Italian dishes on the menu?
+- What are the top 5 orders that spent the most money?
+- What are the least and most ordered items, and what categories are they from?
 
 ---
 
 ## 🗂️ Files in This Repository
 
-- `customers_queries.sql` – customer-related queries
-- `orders_queries.sql` – revenue, trends, sales analysis
+- `menu_items.sql` – customer-related queries
+- `order details.sql` – revenue, trends, sales analysis
 - `products_queries.sql` – product performance and sales breakdown
 
 ---
