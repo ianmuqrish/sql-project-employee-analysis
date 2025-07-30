@@ -1,34 +1,41 @@
-# 🧾 Sales Performance Analysis (SQL Project)
+# 🍽️ SQL Sales Analysis – Menu & Orders Project
 
-This project explores a fictional company's sales data using SQL. It is structured around three main tables: Menu_items, Order_details and Menu_items&order_details
+This SQL project analyzes a fictional restaurant's sales performance using two tables: `menu_items` and `order_details`. Inspired by Maven Analytics' beginner SQL case study.
 
 ---
 
 ## 📌 Objective
 
-Analyze sales performance and answer key business questions like:
+Use SQL to answer business questions about menu performance and order behavior, such as:
+- Which order had the most items?
 - What are the least and most expensive Italian dishes on the menu?
-- What are the top 5 orders that spent the most money?
-- What are the least and most ordered items, and what categories are they from?
+- What is the average dish price wihthin each category?
 
 ---
 
 ## 🗂️ Files in This Repository
 
-- `menu_items.sql` – customer-related queries
-- `order details.sql` – revenue, trends, sales analysis
-- `products_queries.sql` – product performance and sales breakdown
+1. `01_menu_items_queries.sql` – queries focused only on menu items
+2. `02_order_details_queries.sql` – queries analyzing order details
+3. `03_combined_queries.sql` – joins and analysis combining both tables
 
 ---
 
 ## 🛠️ Tools Used
+
 - MySQL
-- SQL (JOIN, GROUP BY, CASE, aggregate functions)
+- SQL (SELECT, JOIN, GROUP BY, ORDER BY, aggregate functions)
 
 ---
 
-## 👤 About Me
+## 💡 Sample Query
 
-Hi, I’m **Ian Muqrish**, an aspiring analyst learning SQL and business data skills.  
+```sql
+select item_name, category, count(order_details_id) as num_purchases
+from order_details od
+left join menu_items mi
+on od.item_id = mi.menu_item_id
+group by item_name, category
+order by num_purchases;
 
 
